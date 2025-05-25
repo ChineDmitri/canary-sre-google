@@ -1,0 +1,25 @@
+]633;E;kubectl get pods -n canary-demo;6e1763c1-c54c-4070-8019-74e9f8731d03]633;CNAME                                                     READY   STATUS    RESTARTS      AGE
+alertmanager-prometheus-kube-prometheus-alertmanager-0   2/2     Running   2 (24m ago)   164m
+canary-demo-75687c458d-f26j7                             1/1     Running   1 (24m ago)   164m
+canary-demo-75687c458d-g5jhw                             1/1     Running   1 (24m ago)   164m
+canary-demo-75687c458d-rlmns                             1/1     Running   1 (24m ago)   164m
+canary-demo-canary-54c9f8f4b8-6lgw9                      1/1     Running   0             5m27s
+prometheus-grafana-77bcfb9bdb-zdm52                      3/3     Running   3 (24m ago)   164m
+prometheus-kube-prometheus-operator-6d9d668dbd-88qhp     1/1     Running   2 (23m ago)   164m
+prometheus-kube-state-metrics-7457555cf7-4bgjm           1/1     Running   2 (23m ago)   164m
+prometheus-prometheus-kube-prometheus-prometheus-0       2/2     Running   2 (24m ago)   164m
+prometheus-prometheus-node-exporter-nbmqf                1/1     Running   1 (24m ago)   164m
+NAME                                      TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+alertmanager-operated                     ClusterIP   None             <none>        9093/TCP,9094/TCP,9094/UDP   164m
+canary-demo                               ClusterIP   10.109.201.203   <none>        80/TCP                       164m
+canary-demo-canary                        ClusterIP   10.103.187.144   <none>        80/TCP                       164m
+prometheus-grafana                        ClusterIP   10.111.75.145    <none>        80/TCP                       164m
+prometheus-kube-prometheus-alertmanager   ClusterIP   10.105.239.82    <none>        9093/TCP,8080/TCP            164m
+prometheus-kube-prometheus-operator       ClusterIP   10.98.54.88      <none>        443/TCP                      164m
+prometheus-kube-prometheus-prometheus     ClusterIP   10.107.93.87     <none>        9090/TCP,8080/TCP            164m
+prometheus-kube-state-metrics             ClusterIP   10.101.176.195   <none>        8080/TCP                     164m
+prometheus-operated                       ClusterIP   None             <none>        9090/TCP                     164m
+prometheus-prometheus-node-exporter       ClusterIP   10.98.61.148     <none>        9100/TCP                     164m
+NAME                       CLASS   HOSTS               ADDRESS        PORTS   AGE
+canary-demo-ingress        nginx   canary-demo.local   192.168.49.2   80      164m
+canary-demo-main-ingress   nginx   canary-demo.local   192.168.49.2   80      164m

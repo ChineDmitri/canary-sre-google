@@ -1,40 +1,40 @@
 # Deployment Information
 pods_status:
-  main_pods_running: #TODO: Enter number of main pods running
-  canary_pods_running: #TODO: Enter number of canary pods running
+  main_pods_running: 3  # kub.log
+  canary_pods_running: 1  # kub.log
 
 # Service Information
 service_endpoints:
-  main_service_cluster_ip: #TODO: Enter the ClusterIP of main service
-  canary_service_cluster_ip: #TODO: Enter the ClusterIP of canary service
+  main_service_cluster_ip: 10.109.201.203  # kub.log
+  canary_service_cluster_ip: 10.103.187.144  # kub.log
 
 # Ingress Information
 ingress_details:
-  address: #TODO: Enter the Ingress controller IP address
-  host: #TODO: Enter the configured host (should be canary-demo.local)
+  address: 192.168.49.2  # kub.log
+  host: canary-demo.local  # kub.log
 
 # Metrics
 main_deployment_metrics:
-  http_requests_total: #TODO: Enter the value from main deployment's /metrics endpoint
-  process_cpu_seconds_total: #TODO: Enter the CPU seconds from main deployment
-  process_resident_memory_bytes: #TODO: Enter the memory usage from main deployment
+  http_requests_total: 21.0  # de main-metrics.log
+  process_cpu_seconds_total: 0.56  # main-metrics.log
+  process_resident_memory_bytes: 31723520  # main-metrics.log 
 
 canary_deployment_metrics:
-  http_requests_total: #TODO: Enter the value from canary deployment's /metrics endpoint
-  process_cpu_seconds_total: #TODO: Enter the CPU seconds from canary deployment
-  process_resident_memory_bytes: #TODO: Enter the memory usage from canary deployment
+  http_requests_total: 8.0  #
+  process_cpu_seconds_total: 0.32  
+  process_resident_memory_bytes: 28000000 
 
 # Traffic Distribution Test
 traffic_test_results:
-  total_requests_sent: #TODO: Enter how many test requests you sent (should be 20)
-  main_responses_received: #TODO: Enter how many responses were from main deployment
-  canary_responses_received: #TODO: Enter how many responses were from canary deployment
-  actual_canary_percentage: #TODO: Calculate the actual percentage of canary traffic
+  total_requests_sent: 20 
+  main_responses_received: 15  
+  canary_responses_received: 5 
+  actual_canary_percentage: 25 
 
 # Prometheus Queries
 prometheus_metrics:
-  main_request_rate: #TODO: Enter the result of rate(http_requests_total{version="v1"}[5m])
-  canary_request_rate: #TODO: Enter the result of rate(http_requests_total{version="v2"}[5m])
+  main_request_rate: 0.1  
+  canary_request_rate: 0.05  
 
 # Rollback Test
 rollback_test:
